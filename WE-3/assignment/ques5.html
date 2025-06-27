@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+</head>
+<body>
+
+    <p>5. Manually remove duplicates from an array using a loop and indexOf. <br>
+        Input: [1, 2, 3, 2, 4, 1] → Output: [1, 2, 3, 4]</p>
+    
+    <script>
+
+        const num = [1, 2, 3, 2, 4, 1];
+        const rem_dup = [];
+
+        for (let i = 0; i < num.length; i++) {
+            const e = num[i];
+            if (rem_dup.indexOf(e) === -1) {
+                rem_dup.push(e);
+            }
+        }
+
+        console.log("Removed Duplicate:", rem_dup);
+
+    </script>
+</body>
+</html>

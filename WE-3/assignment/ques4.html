@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+
+<body>
+
+    <p>
+        4.Write a function to find the second largest number in an array without using built-in sorting.
+    </p>
+
+    <script>
+
+        var num = [12, 23, 22, 21];
+        num = [...new Set(num)];
+        for (let i = 1; i < num.length; i++) {
+            for (let j = 0; j < i; j++) {
+                if (num[i] < num[j]) {
+                    var x = num[i];
+                    num[i] = num[j];
+                    num[j] = x;
+                }
+            }
+        }
+        console.log(num);
+        console.log(num[num.length - 2]);
+    </script>
+
+
+</body>
+
+</html>

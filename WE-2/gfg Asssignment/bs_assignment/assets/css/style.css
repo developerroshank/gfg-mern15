@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+}
+
+/* .navbar {
+    background-color: bisque;
+}
+
+.sidebar {
+    background-color: darksalmon;
+} */
+
+.sidebar {
+    background-color: linen;
+}
+
+
+.navbar {
+    background-color: aliceblue;
+}
+
+.nav-link {
+    color: royalblue !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.content {
+    background-image: url('../images/bg-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: brightness(0.9);
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login__card {
+    padding: 20px;
+    width: 400px;
+    border-radius: 15px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.q__card {
+    position: relative;
+}
+
+.num {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: #dc3545;
+    color: #ffe0b2;
+    border-radius: 100%;
+    top: -15px;
+    right: -15px;
+    text-align: center;
+    align-content: center;
+}
+
+
+.contact__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+}
+
+.contact-img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}

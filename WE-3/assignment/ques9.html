@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8</title>
+</head>
+<body>
+
+    <p>
+        9.Take an array of numbers, and return an array of the sum of digits for each number. <br>
+        Input: [123, 45, 7] → Output: [6, 9, 7]
+    </p>
+
+    <script>
+
+        const num = [123, 45, 7];
+        let output = [];
+
+        for (let i = 0; i < num.length; i++) {
+            const d = num[i].toString();
+            let sum = 0;
+
+            for (let j = 0; j < d.length; j++) {
+                const e = Number(d[j]);
+                sum += e;
+            }
+
+            output.push(sum);
+        }
+
+        console.log("Sum of Digits:", output);
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>
