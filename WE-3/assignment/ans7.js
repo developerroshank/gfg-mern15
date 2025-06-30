@@ -1,3 +1,9 @@
+/**
+ * ## 7. Write a function that checks how many strings in an array are palindromes.
+ * Input: ["madam", "apple", "civic", "pop"]
+ * Output: 3
+ */
+
 let arr = ["madam", "apple", "civic", "pop"];
 let count = 0;
 

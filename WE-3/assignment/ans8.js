@@ -1,3 +1,8 @@
+/**}
+ * 8. Given an array of words, return the longest word and its length.
+ * Input: ["apple", "banana", "grapefruit"] → Output: "grapefruit", 10
+ */
+
 const words = ["apple", "banana", "grapefruit"];
 let wordLength = 0;
 let lonWord = "";

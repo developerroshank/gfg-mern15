@@ -1,3 +1,8 @@
+/**
+ * 9.Take an array of numbers, and return an array of the sum of digits for each number.
+ * Input: [123, 45, 7] → Output: [6, 9, 7]
+ */
+
 const num = [123, 45, 7];
 let output = [];
 

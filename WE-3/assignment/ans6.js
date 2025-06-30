@@ -1,3 +1,7 @@
+/**
+ * ## 6.Take an array of numbers and return both the minimum and maximum values without using Math.min/max.
+ */
+
 const num = [10, 4, 5, 6, 9, 7];
 let min = num[0];
 let max = num[0];

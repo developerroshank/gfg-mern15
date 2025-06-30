@@ -1,3 +1,8 @@
+/**
+ * 10. Reverse an array manually without using .reverse().
+ * Input: [1, 2, 3, 4] → Output: [4, 3, 2, 1]
+ */
+
 const num = [1, 2, 3, 4];
 const rev_num = [];
 

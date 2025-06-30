@@ -1,3 +1,7 @@
+/**
+ * ## 4.Write a function to find the second largest number in an array without using built-in sorting.
+ */
+
 const num = [12, 23, 22, 21];
 let max = num[0];
 let secMax = num[0];
