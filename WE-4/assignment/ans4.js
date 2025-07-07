@@ -3,3 +3,5 @@
 const num = [10, 55, 32, 67, 89];
 
 const maxNum = Math.max(...num);
+
+console.log(maxNum)
