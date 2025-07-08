@@ -3,6 +3,6 @@
 
 let arr = [0, "hello", false, null, 42, "", undefined];
 
-arr = arr.filter(s => s == s);
+arr = arr.filter(Boolean);
 
 console.log(arr);
