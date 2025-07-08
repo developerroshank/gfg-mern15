@@ -2,3 +2,5 @@
 
 const num = [10, 20, 30];
 
+const newNum = num.map(e => '$' + e);
+console.log(newNum);
