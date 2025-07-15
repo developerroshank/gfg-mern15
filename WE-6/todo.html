@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <input type="text" id="input">
+        <button id="addTask">Add</button>
+        <button id="delTask">Delete All</button>
+
+        <ul id="todos">
+
+        </ul>
+    </div>
+
+    <script>
+
+        const addTask = document.getElementById('addTask');
+        const delTask = document.getElementById('delTask');
+        const todos = document.getElementById('todos');
+
+        addTask.addEventListener('click', () => {
+            const inputTask = document.getElementById('input')
+            // console.log(inputTask.value);
+            const todo = document.createElement('li')
+            const content = document.createElement('p')
+            const delBtn = document.createElement('button')
+
+            todo.style.display = 'flex'
+            todo.style.gap = '20px'
+            todo.style.alignItems = 'center'
+
+            delBtn.innerText = "delete"
+            content.innerText = inputTask.value
+            todo.appendChild(content)
+            todo.appendChild(delBtn)
+            todos.appendChild(todo)
+            inputTask.value = ""
+            delBtn.addEventListener('click', () => todo.remove())
+
+        })
+        delTask.addEventListener('click', () => todos.remove())
+
+    </script>
+</body>
+
+</html>
