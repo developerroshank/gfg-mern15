@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5dc;
+    background-image: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.5) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.1) 0%, transparent 50%);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 540px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+
+input {
+    border: 2px solid #c64aec;
+    width: 100%;
+    height: 3rem;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F9F9F9;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: all 0.5s;
+    margin-bottom: 20px;
+}
+
+textarea {
+    border: 2px solid #c64aec;
+    width: 100%;
+    padding: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0px 0px 0px 7px rgba(222, 74, 236, 0.2);
+    background-color: white;
+}
+
+.buttons {
+    text-align: right;
+}
+
+button {
+    background-color: #c64aec;
+    color: #ffffff;
+    padding: 14px 30px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#dltAll {
+    background-color: #d11a2a;
+}
+
+#todos {
+    padding: 10px 0 10px 0;
+    list-style: none;
+}
+
+#todos .box {
+    background-color: burlywood;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#todos button {
+    padding: 8px 16px;
+}
