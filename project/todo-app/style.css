@@ -106,11 +106,21 @@ button {
 
 .content h2,
 .content p {
+    width: 100%;
     margin: 0;
+    word-break: break-word;
 }
 
 .read {
     background-color: #d4edda;
-    text-decoration: line-through;
     color: gray;
+}
+
+.read h2,
+.read p {
+    text-decoration: line-through;
+}
+
+.customize {
+    display: flex;
 }
