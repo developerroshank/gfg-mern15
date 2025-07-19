@@ -37,6 +37,12 @@ add.addEventListener('click', () => {
     edit.innerText = 'Edit';
     edit.style.marginRight = '10px'
 
+    const save = document.createElement('button');
+    save.id = 'edit';
+    save.innerText = 'Save';
+    save.style.marginRight = '10px';
+    save.style.display = 'none';
+
     const dlt = document.createElement('button')
     dlt.id = 'dlt';
     dlt.innerText = 'Delete';
@@ -50,13 +56,14 @@ add.addEventListener('click', () => {
     content.appendChild(todoTitle);
     content.appendChild(todoDesc);
     customize.appendChild(edit);
+    customize.appendChild(save);
     customize.appendChild(dlt);
     todo.appendChild(customize);
 
     todos.appendChild(todo);
 
-    title.value = ""
-    desc.value = ""
+    title.value = "";
+    desc.value = "";
 
     read.addEventListener("change", () => {
         if (read.checked) {
@@ -66,12 +73,27 @@ add.addEventListener('click', () => {
         }
     });
 
+    edit.addEventListener("click", () => {
+        todoTitle.setAttribute("contenteditable", "true");
+        todoDesc.setAttribute("contenteditable", "true");
 
+        todoTitle.focus();
+
+        edit.style.display = 'none';
+        save.style.display = 'block';
+    });
+
+    save.addEventListener("click", () => {
+        todoTitle.setAttribute("contenteditable", "false");
+        todoDesc.setAttribute("contenteditable", "false");
+
+        edit.style.display = 'block';
+        save.style.display = 'none';
+    });
 
 
     dlt.addEventListener('click', () => todo.remove());
-
-
+    
 });
 
 deleteAll.addEventListener('click', () => todos.innerHTML = "");
