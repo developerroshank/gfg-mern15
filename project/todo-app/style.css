@@ -25,11 +25,6 @@ body {
     top: 20px;
 }
 
-/* .container {
-    display: flex;
-    justify-content: center;
-} */
-
 .form {
     background-color: #ffffff;
     padding: 40px;
@@ -123,4 +118,39 @@ button {
 
 .customize {
     display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .todo {
+        display: block;
+    }
+
+    .customize {
+        margin-top: 10px;
+    }
+
+    .form {
+        padding: 24px;
+    }
+
+    .form h1,
+    .todos__title {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 12px 24px;
+    }
+
+    .content h2 {
+        font-size: 1.125rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
 }
