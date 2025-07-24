@@ -1,7 +1,7 @@
 const fetchData = async() => {
     const data = await fetch('https://jsonplaceholder.typicode.com/users');
-    const dataJson = await data.json()
-    return dataJson
+    const dataJson = await data.json();
+    return dataJson;
 }
 
 fetchData().then(result => {
@@ -11,6 +11,9 @@ fetchData().then(result => {
 
         const card = document.createElement('div');
         card.className = 'card';
+
+        const title = document.createElement('h1')
+        title.innerText = 'API Cards'
 
         const parentCircle = document.createElement('div');
         parentCircle.className='parent__circle';
@@ -23,13 +26,16 @@ fetchData().then(result => {
 
         const addr = document.createElement('p');
         // addr.textContent = "Address: " + object.address.street + ', ' + object.address.suite + ', ' + object.address.city + ', Zip: ' + object.address.zipcode  
-        addr.textContent = "City: " + object.address.city;
+        // addr.textContent = "City: " + object.address.city;
+        addr.innerHTML = `<strong>City: </strong> <span>${object.address.city}</span>`;
+
 
         const email = document.createElement('p');
         email.innerHTML = `<strong>Email: </strong> <span><a href="mailto:${object.email}">${object.email}</a></span>`
 
         const company = document.createElement('p');
-        company.textContent = "Company: " + object.company.name;
+        // company.textContent = "Company: " + object.company.name;
+        company.innerHTML = `<strong>Company: </strong> <span>${object.company.name}</span>`;
 
         // const website = document.createElement('p');
         // website.textContent = "Website: " + object.website;
@@ -46,4 +52,5 @@ fetchData().then(result => {
         console.log(object);
         
     });
+    
 }).catch(err => console.log(err));
