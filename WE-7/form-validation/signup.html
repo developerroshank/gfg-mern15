@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container containerSignUp">
+
+        <h2>Sign Up</h2>
+
+        <form id="signupForm" action="" novalidate>
+
+            <div class="form__group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="roshan">
+                <span class="message" id="usernameError"></span>
+            </div>
+
+            <div class="form__group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="roshan@gmail.com">
+                <span class="message" id="emailError"></span>
+            </div>
+
+            <div class="form__group">
+                <label for="phone">Phone</label>
+                <input type="number" name="phone" id="phone" placeholder="9787675455">
+                <span class="message" id="phoneError"></span>
+            </div>
+
+
+            <div class="form__group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="********">
+                <span class="message" id="passwordError"></span>
+            </div>
+
+            <div class="form__group">
+                <label for="cnfPassword">Confirm Password</label>
+                <input type="password" name="cnfPassword" id="cnfPassword" placeholder="********">
+                <span class="message" id="passwordError"></span>
+                <span class="message" id="cnfPasswordError"></span>
+            </div>
+
+            <span class="success" id="success"></span>
+            <button type="submit" id="submit">Submit</button>
+            <p class="account">Already have an account <span><a href="./login.html">Login</a></span></p>
+
+        </form>
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
