@@ -32,7 +32,7 @@
 
             <div class="form__group">
                 <label for="password">Password</label>
-                <input type="text" name="password" id="password" placeholder="********">
+                <input type="password" name="password" id="password" placeholder="********">
                 <span class="message" id="passwordError"></span>
             </div>
 
@@ -49,6 +49,73 @@
 
 
     <script src="./main.js"></script>
+
+    <script>
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (username.value.trim() === "") {
+                username.style.border = '1px solid red';
+                usernameError.innerText = 'Username is required';
+                usernameError.style.color = 'red';
+                isValid = false;
+            } else if (!usernameRegEx.test(username.value.trim())) {
+                username.style.border = '1px solid red';
+                usernameError.innerText = 'Username must be at least 3 characters';
+                usernameError.style.color = 'red';
+                isValid = false;
+            } else {
+                username.style.border = '1px solid green';
+                usernameError.innerText = '';
+            }
+            
+            if (email.value.trim() === "") {
+                email.style.border = '1px solid red';
+                emailError.innerText = 'Email is required';
+                emailError.style.color = 'red';
+                isValid = false;
+            } else if (!emailRegEx.test(email.value.trim())) {
+                email.style.border = '1px solid red';
+                emailError.innerText = 'Invalid Email';
+                emailError.style.color = 'red';
+                console.log(emailError)
+                isValid = false;
+            } else {
+                email.style.border = '1px solid green';
+                emailError.innerText = '';
+            }
+
+            if (password.value.trim() === "") {
+                password.style.border = '1px solid red';
+                passwordError.innerText = 'Password is required';
+                passwordError.style.color = 'red';
+                isValid = false;
+            } else if (!passwordRegEx.test(password.value.trim())) {
+                password.style.border = '1px solid red';
+                passwordError.innerText = 'Invalid Password';
+                passwordError.style.color = 'red';
+                isValid = false;
+            } else {
+                password.style.border = '1px solid green';
+                passwordError.innerText = '';
+            }
+
+            if (isValid) {
+
+                setTimeout(() => {
+                    successMessage.innerText = 'Form Submitted!';
+                    successMessage.style.color = 'green';
+                    loginForm.reset();
+                    username.style.border = '1px solid #6D6875';
+                }, 1000);
+
+                setTimeout(() => {
+                    successMessage.innerText = '';
+                    location.reload();
+                }, 3000);
+            }
+        });
+    </script>
 </body>
 
 </html>
