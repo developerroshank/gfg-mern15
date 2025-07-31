@@ -1,6 +1,3 @@
-import React from 'react'
-import './assets/css/Content.css'
-
 const Content = () => {
   return (
     <section className='content'>
