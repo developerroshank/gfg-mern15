@@ -1,52 +1,53 @@
-import { Button } from "./Button"
-import Content from "./Content"
-import Footer from "./Footer"
-import Header from "./Header"
-import Sidebar from "./Sidebar"
+import React from 'react'
+import { useState } from 'react'
+// import Button from './Button'
+
 
 const App = () => {
 
-  // Internal CSS
-  const styles = {
-    color: 'green',
-    backgroundColor: 'blue'
-    
+  // Increament & Decreament
+
+  const[count,setCount] = useState(0)
+
+  const incHan = () => {
+    if (count < 10) {
+      setCount(count=>count+1)
+    }
+  }
+  const decHan = () => {
+    if(count > 0) {
+
+      setCount(count=>count-1)
+    }
   }
 
+  // Toggle 
+  // const[name,setName] = useState(false)
+
+  // const valueToggle = () => {
+  //   setName(!name)
+  // }
+
+
+
+
+
   return (
-    // <div>
-    //   <Header/>
-    //   <Sidebar/>
-    //   <Content/>
-    //   <Footer/>
-    // </div>
-    
-    
-    // <React.Fragment>
-    //   <Header/>
-    //   <Sidebar/>
-    //   <Content/>
-    //   <Footer/>
-    // </React.Fragment>
-
-    // <>
-    //   <Header/>
-    //   <Sidebar/>
-    //   <Content/>
-    //   <Footer/>
-    // </>
-
     <>
+      {/* Increament & Decreament */}
+      <h1>{count}</h1>
+      <button onClick={incHan}>Increase</button>
+      <button onClick={decHan}>Decrease</button>
 
-    {/* Inline CSS */}
-    <h1 style={{color: 'red'}}>Hello</h1>
+      {/* Value Toggle */}
+      {/* <h1>{name ? "abc" : "xyz"}</h1>
+      <button onClick={valueToggle}>Toggle</button> */}
 
-    {/* Internal CSS */}
-    <h1 style={styles}>Hello</h1>
-</>
+
+      {/* <Button title="login" backgroundColor="red"/> */}
+
+    </>
   )
 }
 
-
-
-export {App}
+export default App
