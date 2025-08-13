@@ -5,7 +5,12 @@ const ViewTodo = () => {
     const todos = useSelector((state) => state.todos);
     console.log(todos);
   return (
-    <div>ViewTodo</div>
+    <div>
+      {todos.map((todo)=> (
+        <p key={todo.id}>{todo.text}</p>
+      ))}
+        
+    </div>
   )
 }
 
