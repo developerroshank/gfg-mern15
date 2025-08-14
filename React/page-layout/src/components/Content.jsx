@@ -5,20 +5,20 @@ const Content = () => {
         <div className="card">
           Card
         </div>
-        
+
         <div className="card">
           Card
         </div>
-        
+
         <div className="card">
           Card
         </div>
-        
+
         <div className="card">
           Card
         </div>
       </div>
-      
+
     </section>
   )
 }
